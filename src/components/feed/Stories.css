@@ -1,0 +1,57 @@
+.stories-container {
+  margin-bottom: 30px;
+}
+
+.stories-title {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.stories-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* Ocultar barra de scroll para un look más limpio */
+.stories-list::-webkit-scrollbar {
+  display: none;
+}
+.stories-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.story-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.story-border {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  padding: 3px;
+  transition: transform 0.2s ease;
+}
+
+.story-border:hover {
+  transform: scale(1.05);
+}
+
+.story-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bg-dark);
+}
+
+.story-username {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 5px;
+  display: block;
+}

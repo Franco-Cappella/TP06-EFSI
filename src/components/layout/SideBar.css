@@ -1,0 +1,64 @@
+    .sidebar {
+  width: var(--sidebar-width);
+  position: fixed;
+  height: 100vh;
+  padding: 20px;
+  background-color: var(--bg-dark);
+}
+
+.sidebar-title {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.profile-widget {
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-pink);
+}
+
+.profile-name {
+  margin-top: 10px;
+}
+
+.verified-badge {
+  color: var(--accent-blue);
+  margin-left: 5px;
+}
+
+.profile-handle {
+  color: var(--text-secondary);
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: var(--bg-card);
+}

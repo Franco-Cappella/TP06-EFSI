@@ -1,0 +1,31 @@
+.postgrid-container {
+  width: 100%;
+}
+
+.postgrid-title {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.postgrid-columns {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.postgrid-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+/* Ajuste responsive para la grilla */
+@media (max-width: 1200px) {
+  .postgrid-columns {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .postgrid-columns {
+    column-count: 1;
+  }
+}

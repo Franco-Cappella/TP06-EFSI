@@ -1,0 +1,56 @@
+.post-card {
+  margin-bottom: 20px;
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.post-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.post-footer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.post-username {
+  font-size: 14px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.action-btn:active {
+  transform: scale(0.9);
+}
