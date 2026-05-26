@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FiHeart, FiMessageCircle, FiSend } from 'react-icons/fi';
 import { FaHeart } from 'react-icons/fa';
 import './Post.css';
 
 export const Post = ({ post, onOpenModal }) => {
   const [isLiked, setIsLiked] = useState(false);
+  const visibleLikes = isLiked ? post.likes + 1 : post.likes;
 
   const handleLike = (e) => {
     e.stopPropagation(); 
@@ -18,7 +19,10 @@ export const Post = ({ post, onOpenModal }) => {
       <div className="post-footer">
         <div className="post-user-info">
           <img src={post.userAvatar} alt="User" className="post-avatar" />
-          <span className="post-username">{post.username}</span>
+          <div>
+            <span className="post-username">{post.username}</span>
+            <span className="post-likes">{visibleLikes} likes</span>
+          </div>
         </div>
         
         <div className="post-actions">

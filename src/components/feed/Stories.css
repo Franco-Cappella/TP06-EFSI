@@ -47,6 +47,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--bg-dark);
+  transform: none;
 }
 
 .story-username {

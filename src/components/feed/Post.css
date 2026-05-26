@@ -16,6 +16,7 @@
   width: 100%;
   display: block;
   object-fit: cover;
+  transform: none;
 }
 
 .post-footer {
@@ -38,7 +39,16 @@
 }
 
 .post-username {
+  display: block;
   font-size: 14px;
+  font-weight: 700;
+}
+
+.post-likes {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: 2px;
 }
 
 .post-actions {

@@ -1,8 +1,15 @@
-import React from 'react';
 import { Post } from './Post';
 import './PostGrid.css';
 
-export const PostGrid = ({ posts, onOpenModal }) => {
+export const PostGrid = ({ posts, isLoading, error, onOpenModal }) => {
+  if (isLoading) {
+    return <p className="postgrid-message">Cargando publicaciones...</p>;
+  }
+
+  if (error) {
+    return <p className="postgrid-message postgrid-error">{error}</p>;
+  }
+
   return (
     <div className="postgrid-container">
       <h2 className="postgrid-title">TRENDING</h2>

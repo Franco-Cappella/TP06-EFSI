@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiSettings, FiCamera, FiSend, FiSearch, FiPlusCircle } from 'react-icons/fi';
 import './TopBar.css';
 

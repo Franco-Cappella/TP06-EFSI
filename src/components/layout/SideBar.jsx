@@ -1,47 +1,44 @@
-import React from 'react';
-import { FiHome, FiCompass, FiPlayCircle, FiMonitor, FiBell } from 'react-icons/fi';
-import './SideBar.css'; 
-const mockUser = {
-  username: 'Uğur Mercan',
-  handle: '@ugur_mercan0',
-  avatar: 'https://i.pravatar.cc/150?img=11', // Placeholder de avatar
-  followers: '121K',
-  likes: '900K',
-  bio: 'Web Designer & Developer | Creando cosas increíbles.',
-};
+import { FiBell, FiCompass, FiHome, FiMonitor, FiPlayCircle } from 'react-icons/fi';
+import { mockUser } from '../../data/mockUser';
+import './SideBar.css';
 
-export const Sidebar = ({ setView }) => {
+export const Sidebar = ({ currentView, setView }) => {
   return (
     <aside className="sidebar">
       <h2 className="sidebar-title">Instagram</h2>
-      
-      <div className="profile-widget" onClick={() => setView('profile')}>
+
+      <button className="profile-widget" onClick={() => setView('profile')} type="button">
         <img src={mockUser.avatar} alt="Profile" className="profile-avatar" />
-        <h3 className="profile-name">{mockUser.username} <span className="verified-badge">✔</span></h3>
+        <h3 className="profile-name">{mockUser.username} <span className="verified-badge">OK</span></h3>
         <p className="profile-handle">{mockUser.handle}</p>
         <div className="profile-stats">
-          <span>👤 {mockUser.followers}</span>
-          <span>❤️ {mockUser.likes}</span>
+          <span>{mockUser.followers} followers</span>
+          <span>{mockUser.following} following</span>
         </div>
-      </div>
+      </button>
 
       <nav className="nav-menu">
-        <div className="nav-item active" onClick={() => setView('home')}>
+        <button
+          className={`nav-item ${currentView === 'home' ? 'active' : ''}`}
+          onClick={() => setView('home')}
+          type="button"
+        >
           <FiHome size={24} /> <span>Home</span>
-        </div>
-        <div className="nav-item">
+        </button>
+        <button className="nav-item" onClick={() => setView('home')} type="button">
           <FiCompass size={24} /> <span>Explore</span>
-        </div>
-        <div className="nav-item">
+        </button>
+        <button className="nav-item" onClick={() => setView('home')} type="button">
           <FiPlayCircle size={24} /> <span>Reels</span>
-        </div>
-        <div className="nav-item">
+        </button>
+        <button className="nav-item" onClick={() => setView('home')} type="button">
           <FiMonitor size={24} /> <span>IGTV</span>
-        </div>
-        <div className="nav-item">
+        </button>
+        <button className="nav-item" onClick={() => setView('home')} type="button">
           <FiBell size={24} /> <span>Notification</span>
-        </div>
+        </button>
       </nav>
     </aside>
   );
 };
+
