@@ -1,6 +1,16 @@
 import { FiBell, FiCompass, FiHome, FiMonitor, FiPlayCircle } from 'react-icons/fi';
-import { mockUser } from '../../data/mockUser';
 import './SideBar.css';
+
+const mockUser = {
+  username: 'Ugur Mercan',
+  handle: '@ugur_mercan0',
+  avatar: 'https://i.pravatar.cc/150?img=11',
+  bio: 'Web designer y creador de contenido sobre gatos, fotografia y redes.',
+  postsCount: 15,
+  followers: '121K',
+  following: 348,
+};
+
 
 export const Sidebar = ({ currentView, setView }) => {
   return (
@@ -9,7 +19,7 @@ export const Sidebar = ({ currentView, setView }) => {
 
       <button className="profile-widget" onClick={() => setView('profile')} type="button">
         <img src={mockUser.avatar} alt="Profile" className="profile-avatar" />
-        <h3 className="profile-name">{mockUser.username} <span className="verified-badge">OK</span></h3>
+        <h3 className="profile-name">{mockUser.username} </h3>
         <p className="profile-handle">{mockUser.handle}</p>
         <div className="profile-stats">
           <span>{mockUser.followers} followers</span>
